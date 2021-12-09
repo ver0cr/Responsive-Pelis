@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,25 @@
 
     <link rel="stylesheet" href="assets/css/barra-lateral.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/busqueda.css">
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
+
 <body id="body">
-    
+
     <header>
         <div class="icon__menu">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+        
+        <div class="content">
+            <div class="search">
+                <input type="text" class="search__input" aria-label="search" placeholder="enter your search">
+                <button class="search__submit" aria-label="submit search"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
     </header>
 
     <div class="menu__side" id="menu_side">
@@ -26,7 +37,7 @@
             <h4>Peliculón</h4>
         </div>
 
-        <div class="options__menu">	
+        <div class="options__menu">
 
             <a href="index.html" class="selected">
                 <div class="option">
@@ -41,8 +52,8 @@
                     <h4>Mejores taquillas</h4>
                 </div>
             </a>
-            
-            <a href="#">
+
+            <a href="genero.html">
                 <div class="option">
                     <i class="fas fa-video" title="Cursos"></i>
                     <h4>Por Género</h4>
@@ -59,7 +70,7 @@
             <a href="nosotros.html">
                 <div class="option">
                     <i class="far fa-address-card" title="Nosotros"></i>
-                    <h4>Sobre Nosotros</h4>
+                    <h4>Sobre Nosotras</h4>
                 </div>
             </a>
 
@@ -76,4 +87,5 @@
     <script src="assets/js/java.js"></script>
 
 </body>
+
 </html>
