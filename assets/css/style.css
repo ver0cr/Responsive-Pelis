@@ -4,6 +4,14 @@ body{
 
 }
 
+@media (min-width: 700px) and (max-width: 800px){
+	.lateral{
+		width: 33%;
+		float: right;
+		background-color: #6ee;
+	}
+}
+
 btn-busqueda{
     align-content: right;
 }
