@@ -15,3 +15,7 @@ body{
 btn-busqueda{
     align-content: right;
 }
+
+.testbox{
+	height: 100px;
+}

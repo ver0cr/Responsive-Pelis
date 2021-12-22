@@ -1,25 +1,33 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const Dotenv = require('dotenv-webpack');
+function cargarPeliculas() {
+  $.ajax({
+    type: 'get',
+    dataType: 'json',
+    url: `https://api.themoviedb.org/3/trending/all/day?api_key=f9d454a7908f5a64ae231240c823e0e4&language=es`,
+    async: 'true',
+    success: function(data) {renderPelicula(data)},
+  });
+}
 
-const htmlPlugin = new HtmlWebpackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html",
-});
+function renderPelicula(data) {
+  $("#peliculas").append(`<div><h3>${data.results[0].title}</h3><img src="https://image.tmdb.org/t/p/w500${data.results[0].poster_path}"></div><h3>${data.results[0].overview}</h3>`);
+  $("#peliculas").append(`<div><h3>${data.results[1].title}</h3><img src="https://image.tmdb.org/t/p/w500${data.results[1].poster_path}"></div><h3>${data.results[1].overview}</h3>`);
+}
 
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ["babel-loader", "eslint-loader"],
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
-  },
-  devtool: 'inline-source-map',
-  plugins: [htmlPlugin, new Dotenv()],
-};
+$(document).ready(function () {
+  cargarPeliculas();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
