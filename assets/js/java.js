@@ -8,6 +8,7 @@ function cargarPeliculas() {
   });
 }
 //peliculas al azar de un género en específico: https://api.themoviedb.org/3/discover/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&with_genres=28&language=es
+// function(){cargarPelicula(data.results[i].id)}
 
 function renderPelicula(data) {
   for (let i = 0; i < 12; i++) {
