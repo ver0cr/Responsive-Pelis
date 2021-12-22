@@ -12,7 +12,7 @@ function cargarPeliculas() {
 function renderPelicula(data) {
   for (let i = 0; i < 12; i++) {
     $("#peliculas").append(`<div id= "div-${data.results[i].id}"><h3>${data.results[i].title}</h3><img src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}"><button id= "movie-${data.results[i].id}"> Descripción</button></div>`);
-    $(`#movie-${data.results[i].id}`).click(cargarPelicula(data.results[i].id));
+    $(`#movie-${data.results[i].id}`).clickfunction(){cargarPelicula(data.results[i].id)};
   }
 }
 function detallesPelicula(data) {
