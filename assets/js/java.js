@@ -55,6 +55,13 @@ function renderPic(data) {
   $('#pictures-container').append(div);
 }
 
+$(document).ready(function () {
+  // Desplegamos 9 imágenes
+  for (let i = 0; i < 9; i++) {
+      getPic();
+  }
+})
+
 
 
 
