@@ -19,3 +19,7 @@ btn-busqueda{
 .testbox{
 	height: 100px;
 }
+
+.grid-container {
+	display: grid;
+  }
