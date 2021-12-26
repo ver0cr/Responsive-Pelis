@@ -19,10 +19,3 @@ btn-busqueda{
 .testbox{
 	height: 100px;
 }
-
-#galeria {
-	margin: 1rem auto;
-	width:100%;
-	max-width:960px;
-	column-count: 3;
-}
