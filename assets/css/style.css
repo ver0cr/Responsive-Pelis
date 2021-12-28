@@ -33,7 +33,17 @@ btn-busqueda{
 }
 
 .grid div img{
-
+	width: 350px;
 }
+
+.btn-descripcion{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	background-color: #d3cbc0;
+	padding: 5px;
+}
+
 
 

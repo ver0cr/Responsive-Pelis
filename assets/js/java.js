@@ -11,8 +11,9 @@ function cargarPeliculas() {
 // function(){cargarPelicula(data.results[i].id)}
 
 function renderPelicula(data) {
-  for (let i = 0; i < 12; i++) {
-    $("#peliculas").append(`<div id= "div-${data.results[i].id}"><h3>${data.results[i].title}</h3><img src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}"><button id= "movie-${data.results[i].id}"> Descripción</button></div>`);
+  for (let i = 0; i < 12; i++) { 
+    $("#peliculas").empty();
+    $("#peliculas").append(`<div id= "div-${data.results[i].id}"><h3>${data.results[i].title}</h3><img src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}"><button id= "movie-${data.results[i].id}" class="btn-descripcion"> Descripción</button></div>`);
     $(`#movie-${data.results[i].id}`).click(function(){cargarPelicula(data.results[i].id)});
   }
 }
@@ -34,32 +35,6 @@ function cargarPelicula(id) {
 
 $(document).ready(function () {
   cargarPeliculas();
-})
-
-
-function renderPic(data) {
-  // Manipulamos el DOM para agregar las imágenes
-  let div = $("<div></div>");
-  div.addClass("pic card");
-
-  let img = $("<img></img>");
-  img.attr("src", data.download_url);
-  img.addClass("card-img");
-  div.append(img);
-
-  let author = $("<h3></h3>");
-  author.addClass("card-title");
-  author.append(data.author);
-  div.append(author);
-
-  $('#pictures-container').append(div);
-}
-
-$(document).ready(function () {
-  // Desplegamos 9 imágenes
-  for (let i = 0; i < 9; i++) {
-      getPic();
-  }
 })
 
 
