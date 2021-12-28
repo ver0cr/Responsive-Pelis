@@ -20,23 +20,20 @@ btn-busqueda{
 	height: 100px;
 }
 
-.container div {
-    background-color: aquamarine;
-    border: 2px solid lightslategray;
-    border-radius: 5px;
-    padding: 10px;
-}
 
 /* Definimos la cuadrÃ­cula */
 .grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;  /* 2/4 1/4 1/4 */
-    grid-auto-rows: 100px;
+    grid-template-columns: 1fr 1fr 1fr;  /* 2/4 1/4 1/4 */
 }
 
 .grid div {
     margin: 5px 20px;
     text-align: center;
+}
+
+.grid div img{
+
 }
 
 
