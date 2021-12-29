@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculón</title>
+
+    <link rel="stylesheet" href="assets/css/barra-lateral.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/busqueda.css">
+    <link rel="stylesheet" href="assets/css/tarjetas.css">
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+
+    <header>
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+
+        <div class="content">
+            <div class="search">
+                <input id= "texto-busqueda" type="text" class="search__input" aria-label="search" placeholder="enter your search">
+                <button id="btn-busqueda" class="search__submit" aria-label="submit search"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <i class="fas fa-film"></i>
+            <h4>Peliculón</h4>
+        </div>
+
+        <div class="options__menu">
+
+            <a href="index.html" class="selected">
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+
+            <a href="genero.html" class="selected">
+                <div class="option">
+                    <i class="fas fa-home" title="Género"></i>
+                    <h4>Generos</h4>
+                </div>
+            </a>
+
+            <a href="taquillas.html">
+                <div class="option">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h4>Mejores taquillas</h4>
+                </div>
+            </a>
+
+            <a href="nosotros.html">
+                <div class="option">
+                    <i class="far fa-address-card" title="Nosotros"></i>
+                    <h4>Sobre Nosotras</h4>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div id="pictures-container" class="flex-container flex-stretch"></div>
+
+    <main>
+        <h1>Género</h1><br>
+        <div class="testbox">
+            <div id="peliculas" class= "grid"></div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/barra-lateral.js"></script>
+    <script src="assets/js/java.js"></script>
+
+
+</body>
+
+</html>
