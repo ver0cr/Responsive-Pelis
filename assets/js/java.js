@@ -7,6 +7,8 @@ function cargarPeliculas() {
     success: function (data) { renderPelicula(data) },
   });
 }
+// ranking https://api.themoviedb.org/3/movie/top_rated?api_key=c41bd0194b74d8255c364fa70f725d1a&language=es
+
 //peliculas al azar de un género en específico: https://api.themoviedb.org/3/discover/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&with_genres=28&language=es
 // function(){cargarPelicula(data.results[i].id)}
 
