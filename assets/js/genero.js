@@ -37,7 +37,7 @@ function buscarPelicula(texto) {
   $.ajax({
     type: 'get',
     dataType: 'json',
-    url: `https://api.themoviedb.org/3/search/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&language=es&query=${texto}`,
+    url: `https://api.themoviedb.org/3/movie/top_rated?api_key=c41bd0194b74d8255c364fa70f725d1a&language=en-US&page=1${texto}`,
     async: 'true',
     success: function (data) { console.log(data); renderPelicula(data) },
     error: function (data) {console.log("ERROR 404")}
