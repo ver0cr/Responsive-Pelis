@@ -16,8 +16,21 @@ btn-busqueda{
     align-content: right;
 }
 
-.testbox{
-	height: 100px;
+
+
+/* Definimos la cuadrÃ­cula */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  /* 2/4 1/4 1/4 */
+}
+
+.grid div {
+    margin: 5px 20px;
+    text-align: center;
+}
+
+.grid div img{
+	width: 350px;
 }
 
 
