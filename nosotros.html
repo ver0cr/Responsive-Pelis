@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,36 @@
 
     <link rel="stylesheet" href="assets/css/barra-lateral.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/busqueda.css">
+    <link rel="stylesheet" href="assets/css/tarjetas.css">
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
+
 <body id="body">
-    
+
     <header>
         <div class="icon__menu">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+
+        <div class="content">
+            <div class="search">
+                <input id= "texto-busqueda" type="text" class="search__input" aria-label="search" placeholder="enter your search">
+                <button id="btn-busqueda" class="search__submit" aria-label="submit search"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
     </header>
 
- <div class="options__menu">
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <i class="fas fa-film"></i>
+            <h4>Peliculón</h4>
+        </div>
+
+        <div class="options__menu">
 
             <a href="index.html" class="selected">
                 <div class="option">
@@ -27,37 +46,31 @@
                     <h4>Inicio</h4>
                 </div>
             </a>
-            
-            <li class="list__item list__item--click">
-                <div class="list__button list__button--click">
-                    <img src="assets/docs.svg" class="list__img">
-                    <a href="#" class="nav__link">Servicios</a>
-                    <img src="assets/arrow.svg" class="list__arrow">
-                </div>
-
-                <ul class="list__show">
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
-                    </li>
-
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
-                    </li>
-                </ul>
-
-            </li>
 
             <a href="genero.html" class="selected">
                 <div class="option">
                     <i class="fas fa-home" title="Género"></i>
                     <h4>Generos</h4>
-                    <li>
-                        <a href="accion.html">Acción</a>
-                        <a href="drama.html">Drama</a>
-                        <a href="terror.html">Terror</a>
-                        <a href="romance.html">Romance</a>
-                    </li>
                 </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="drama.html" class="nav__link nav__link--inside">Drama</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="romance.html" class="nav__link nav__link--inside">Romnance</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="accion.html" class="nav__link nav__link--inside">Acción</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="terror.html" class="nav__link nav__link--inside">Terror</a>
+                    </li>
+                </ul>
+
             </a>
 
             <a href="taquillas.html">
@@ -78,23 +91,22 @@
 
     </div>
 
+    <div id="pictures-container" class="flex-container flex-stretch"></div>
+
     <main>
-        <h1>Sobre Nosotras</h1><br>
-        <p>Integrantes del equipo:</p>
-        <br>
-        <li>Verónica Carranza</li>
-        <li>Arellys Zuta</li>
-        <li>Micaela Cusipuma</li>
-        <br>
-        <h1>Propósito de la página</h1><br>
-        <p>Brindarle a las personas interesadas en ver 
-        películas información precisa y didáctica sobre distintos filmes.</p>
-
-
+        <h1>Peliculón</h1><br>
+        <div class="testbox">
+            <div id="peliculas" class= "grid"></div>
+        </div>
     </main>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/js/barra-lateral.js"></script>
     <script src="assets/js/java.js"></script>
 
+
 </body>
+
 </html>
