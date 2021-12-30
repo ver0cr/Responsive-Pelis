@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peliculón</title>
 
-    <link rel="stylesheet" href="assets/css/barra-lateral.css">
+    <link rel="stylesheet" href="assets/css/list.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/busqueda.css">
-    <link rel="stylesheet" href="assets/css/tarjetas.css">
+
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
@@ -31,63 +31,77 @@
 
     </header>
 
-    <div class="menu__side" id="menu_side">
+    <nav class="nav">
+        <ul class="list">
 
-        <div class="name__page">
-            <i class="fas fa-film"></i>
-            <h4>Peliculón</h4>
-        </div>
-
-        <div class="options__menu">
-
-            <a href="index.html" class="selected">
-                <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <h4>Inicio</h4>
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="assets/dashboard.svg" class="list__img">
+                    <a href="#" class="nav__link">Inicio</a>
                 </div>
-            </a>
+            </li>
 
-            <a href="genero.html" class="selected">
-                <div class="option">
-                    <i class="fas fa-home" title="Género"></i>
-                    <h4>Generos</h4>
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <img src="assets/docs.svg" class="list__img">
+                    <a href="#" class="nav__link">Servicios</a>
+                    <img src="assets/arrow.svg" class="list__arrow">
                 </div>
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="drama.html" class="nav__link nav__link--inside">Drama</a>
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
                     </li>
 
                     <li class="list__inside">
-                        <a href="romance.html" class="nav__link nav__link--inside">Romnance</a>
-                    </li>
-
-                    <li class="list__inside">
-                        <a href="accion.html" class="nav__link nav__link--inside">Acción</a>
-                    </li>
-
-                    <li class="list__inside">
-                        <a href="terror.html" class="nav__link nav__link--inside">Terror</a>
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
                     </li>
                 </ul>
 
-            </a>
+            </li>
 
-            <a href="taquillas.html">
-                <div class="option">
-                    <i class="fas fa-ticket-alt"></i>
-                    <h4>Mejores taquillas</h4>
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="assets/stats.svg" class="list__img">
+                    <a href="#" class="nav__link">Estadisticas</a>
                 </div>
-            </a>
+            </li>
 
-            <a href="nosotros.html">
-                <div class="option">
-                    <i class="far fa-address-card" title="Nosotros"></i>
-                    <h4>Sobre Nosotras</h4>
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <img src="assets/bell.svg" class="list__img">
+                    <a href="#" class="nav__link">Notificaciones</a>
+                    <img src="assets/arrow.svg" class="list__arrow">
                 </div>
-            </a>
 
-        </div>
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a href="#" class="nav__link nav__link--inside">Estoy dentro</a>
+                    </li>
+                </ul>
+
+            </li>
+
+
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="assets/message.svg" class="list__img">
+                    <a href="#" class="nav__link">Contacto</a>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
 
     </div>
 
@@ -103,7 +117,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="assets/js/barra-lateral.js"></script>
+    <script src="assets/js/list.js"></script>
     <script src="assets/js/java.js"></script>
 
 
