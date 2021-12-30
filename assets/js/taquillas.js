@@ -35,12 +35,3 @@ function cargarPeliculas() {
     });
   }
   
-  
-  $(document).ready(function () {
-    cargarPeliculas();
-    $("#btn-busqueda").click(function () {
-      let texto = $("#texto-busqueda").val();
-      buscarPelicula(texto);
-    });
-  })
-  
