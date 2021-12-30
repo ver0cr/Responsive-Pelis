@@ -21,20 +21,6 @@ btn-busqueda{
 }
 
 
-/* Definimos la cuadrÃ­cula */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  /* 2/4 1/4 1/4 */
-}
-
-.grid div {
-    margin: 5px 20px;
-    text-align: center;
-}
-
-.grid div img{
-	width: 350px;
-}
 
 .btn-descripcion{
 	display:block;
@@ -45,5 +31,11 @@ btn-busqueda{
 	padding: 5px;
 }
 
-
-
+.btn-g{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	background-color: #d3cbc0;
+	padding: 5px;
+}
