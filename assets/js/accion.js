@@ -2,7 +2,7 @@ function cargarPeliculas() {
     $.ajax({
       type: 'get',
       dataType: 'json',
-      url: `https://api.themoviedb.org/3/discover/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&language=es`,
+      url: `https://api.themoviedb.org/3/discover/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&with_genres=28&language=es`,
       async: 'true',
       success: function (data) { renderPelicula(data) },
     });
@@ -27,7 +27,7 @@ function cargarPeliculas() {
     $.ajax({
       type: 'get',
       dataType: 'json',
-      url: `https://api.themoviedb.org/3/movie/${id}?api_key=c41bd0194b74d8255c364fa70f725d1a&language=es`,
+      url: `https://api.themoviedb.org/3/discover/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&with_genres=28&language=es`,
       async: 'true',
       success: function (data) { detallesPelicula(data) },
     });
@@ -37,7 +37,7 @@ function cargarPeliculas() {
     $.ajax({
       type: 'get',
       dataType: 'json',
-      url: `https://api.themoviedb.org/3/search/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&language=es&query=${texto}`,
+      url: `https://api.themoviedb.org/3/discover/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&with_genres=28&language=es=${texto}`,
       async: 'true',
       success: function (data) { console.log(data); renderPelicula(data) },
       error: function (data) {console.log("ERROR 404")}
