@@ -12,26 +12,3 @@ function cargarPeliculas() {
 
   //https://api.themoviedb.org/3/movie/top_rated?api_key=c41bd0194b74d8255c364fa70f725d1a&language=en-US&page=1
   
-  function renderPelicula(data) {
-    $("#peliculas").empty();
-    for (let i = 0; i < data.results.length; i++) {
-      $("#peliculas").append(`<div id="div-${data.results[i].id}"><h3>${data.results[i].title}</h3><img src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}"><button id="movie-${data.results[i].id}" class="btn-descripcion">Descripción</button></div>`);
-      $(`#movie-${data.results[i].id}`).click(function () { cargarPelicula(data.results[i].id) });
-    }
-  }
-  function detallesPelicula(data) {
-    $(`#detalles-${data.id}`).remove();
-    $(`#div-${data.id}`).append(`<p id="detalles-${data.id}">${data.overview}</p>`);
-  
-  }
-  
-  function cargarPelicula(id) {
-    $.ajax({
-      type: 'get',
-      dataType: 'json',
-      url: `https://api.themoviedb.org/3/movie/top_rated?api_key=c41bd0194b74d8255c364fa70f725d1a&language=en-es&page=1`,
-      async: 'true',
-      success: function (data) { detallesPelicula(data) },
-    });
-  }
-  
