@@ -2,7 +2,7 @@ function cargarPeliculas() {
   $.ajax({
     type: 'get',
     dataType: 'json',
-    url: `https://api.themoviedb.org/3/discover/movie?api_key=c41bd0194b74d8255c364fa70f725d1a&with_genres=28&language=es`,
+    url: `https://api.themoviedb.org/3/movie/popular?api_key=c41bd0194b74d8255c364fa70f725d1a&language=es&page=1`,
     async: 'true',
     success: function (data) { renderPelicula(data) },
   });
